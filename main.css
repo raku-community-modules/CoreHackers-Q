@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #ddc;
+    color: #333;
+}
+
+body {
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.level {
+    display: inline-block;
+    width: 2em;
+    border-right: 1px dashed #333;
+    margin-right: 5px;
+    border-top: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+}
+
+.qast-sunk {
+    background: #ccf;
+}
