@@ -44,7 +44,7 @@ method node-text:sym<qast>($/) {
     )
 }
 method node-text:sym<misc>($/)   { make E$/.trim }
-method node-text:sym<want-v>($/) { make '-v' }
+method node-text:sym<want-v>($/) { make E$/ }
 
 method children($/) {
     make $<node>.elems ?? ｢<ul class="nodes">｣ ~ $<node>».made ~ ｢</ul>｣ !! ''
