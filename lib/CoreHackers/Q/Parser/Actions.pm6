@@ -20,39 +20,32 @@ method TOP($/) {
 }
 
 method node($/) {
-    make ｢<li class="node｣
+    my ($text, @classes) = $<node-text>.made;
+    make ｢<li class="node ｣
+        ~ (@classes.map: 'qast-' ~ *)
         ~ ｢ node-with-kids｣ x ?$<children>.made
-        ~ ｢">｣ ~ $<node-text>.made ~ $<children>.made ~ ｢</li>｣
+        ~ ｢ qast-want-v｣    x ?$*qast-want-v
+        ~ ｢">｣ ~ $text ~ $<children>.made ~ ｢</li>｣
 }
 
 method node-text:sym<qast>($/) {
-    make ｢<b class="qast">｣ ~ E$<name> ~ ｢</b>｣ ~ E$<rest>
+    make (
+        ｢<b class="qast">｣ ~ E$<name> ~ ｢ </b>｣ ~ E$<rest>,
+        |gather {
+            take 'sunk' if $/.contains: 'sunk';
+            take 'name-' ~ lc $<name>;
+            if $/.contains: 'chainstatic' | 'callstatic' {
+                take 'static-call'
+            }
+            elsif $/.contains: 'chain' | 'call' {
+                take 'call'
+            }
+        }
+    )
 }
-method node-text:sym<misc>($/) { make E$/.trim }
+method node-text:sym<misc>($/)   { make E$/.trim }
+method node-text:sym<want-v>($/) { make '-v' }
 
 method children($/) {
     make $<node>.elems ?? ｢<ul class="nodes">｣ ~ $<node>».made ~ ｢</ul>｣ !! ''
-    # exit if $++ > 2;
-    # make $/.list.head.map: *<node>.made
 }
-
-#
-# method line($/) {
-#     make ｢<p class='line'>｣ ~ ｢<span class='level'></span>｣ x $<level>.made
-#       ~ ($<data> ?? $<data>.made !! E$<unknown>)
-# }
-#
-# method data:sym<qast>($/) {
-#     make ｢<span class="qast ｣ ~ qast-marker-for(~$<rest>) ~ ｢"><b>｣
-#       ~ E$<name> ~ ｢</b> ｣ ~ E$<rest>.trim ~ ｢</span>｣
-# }
-#
-# method level($/) {
-#     make $/.chars/2
-# }
-#
-# sub qast-marker-for (Str:D $_) {
-#     join '', map 'qast-'~*, gather {
-#         /«sunk»/ and take 'sunk';
-#     }
-# }

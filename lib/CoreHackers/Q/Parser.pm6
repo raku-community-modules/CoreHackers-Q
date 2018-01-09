@@ -6,28 +6,15 @@ method view (Str:D $source) {
 }
 
 token TOP      { :my $*indent = 0; <node>+ }
-token node     { <node-text> [\n {$*indent++} <children> {$*indent--}]? }
-token children { ['  '**{$*indent} <node>]* }
+token node     {
+    <node-text> [\n {$*indent++} <children> {$*indent--}]?
+}
+token children {
+    :my $*qast-want-v = 0;
+    ['  '**{$*indent} <node>]*
+}
 
 proto token node-text {*}
-token node-text:sym<qast> { '- QAST::' $<name>=\S+ $<rest>=\N+ }
-token node-text:sym<misc> { \N+ }
-
-
-
-
-# token line {
-#     <level> [<data>||<unknown>] \n
-# }
-#
-# token level {
-#     '  '*
-# }
-#
-# proto token data {*}
-# token data:sym<qast> {
-#     '- QAST::' <name=ident> $<rest>=\N+
-# }
-# token unknown {
-#     \N+
-# }
+token node-text:sym<qast>   { '- QAST::' <name=ident> {} $<rest>=\N+ }
+token node-text:sym<want-v> { '- v' { $*qast-want-v = 1 } }
+token node-text:sym<misc>   { {} \N+ }
