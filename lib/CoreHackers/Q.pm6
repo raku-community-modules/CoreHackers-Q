@@ -6,3 +6,5 @@ method run (@args, :$opt) {
     my $source = (run @args, :out).out.slurp: :close;
     say CoreHackers::Q::Parser.new.view: $source;
 }
+
+method zero-run(@args) { run @args }

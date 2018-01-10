@@ -49,6 +49,16 @@ $ q-corehackers.p6 o perl6 -e 'say "hello"' > out.html; google-chrome out.html
 `--target=optimize` QAST. Once again, you don't need to manually specify
 `--target` parameter.
 
+
+## `z` command
+
+```bash
+$ q-corehackers.p6 z perl6 -e 'say "hello"'
+```
+
+Just runs the perl6 command as is. Mnemonic: "zero". This command exists simply
+to easily switch between `a`/`o` runs and plain perl6 runs.
+
 ----
 
 #### REPOSITORY

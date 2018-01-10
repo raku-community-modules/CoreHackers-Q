@@ -10,3 +10,7 @@ multi MAIN('a', *@args) {
 multi MAIN('o', *@args) {
     CoreHackers::Q.new.run: @args, :opt;
 }
+
+multi MAIN('z', *@args) {
+    CoreHackers::Q.new.zero-run: @args, :opt;
+}
