@@ -6,7 +6,7 @@
     "description"  : "Perl 6 QAST Visualizer",
     "tags"         : [ "core dev" ],
     "depends"      : [
-        "use HTML::Escape"
+        "HTML::Escape"
     ],
     "test-depends" : [
     ],
@@ -14,7 +14,7 @@
         "CoreHackers::Q" : "lib/CoreHackers/Q.pm6",
         "CoreHackers::Q::Parser" : "lib/CoreHackers/Q/Parser.pm6",
         "CoreHackers::Q::Parser::Actions" :
-            "lib/CoreHackers/Q/Parser/Actions.pm6",
+            "lib/CoreHackers/Q/Parser/Actions.pm6"
     },
     "authors"       : ["Zoffix Znet"],
     "support"       : {"source"   : "https://github.com/zoffixznet/q.git"}
