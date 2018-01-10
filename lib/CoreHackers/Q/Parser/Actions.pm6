@@ -10,12 +10,16 @@ method TOP($/) {
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Perl 6 QAST Viewer</title>
+      <!-- CSS INSERT START -->
       <link rel="stylesheet" href="main.css">
+      <!-- CSS INSERT END -->
       <script
           src="https://code.jquery.com/jquery-3.2.1.min.js"
           integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
           crossorigin="anonymous"></script>
+      <!-- JS INSERT START -->
       <script src="main.js"></script>
+      <!-- JS INSERT END -->
       ♥
 }
 
