@@ -1,4 +1,4 @@
-# CoreHackers::QAST
+# CoreHackers::Q
 
 QAST tree visualizer
 
