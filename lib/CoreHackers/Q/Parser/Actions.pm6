@@ -1,10 +1,12 @@
 unit class CoreHackers::Q::Parser::Actions;
 use HTML::Escape;
 
+has Str:D $.code is required;
+
 sub prefix:<E> { $^t.Str.&escape-html }
 
 method TOP($/) {
-    make Q:to/♥/ ~ ｢<ul class="nodes">｣ ~ $<node>».made.join("\n") ~ ｢</ul>｣;
+    make q:to/♥/ ~ ｢<ul class="nodes">｣ ~ $<node>».made.join("\n") ~ ｢</ul>｣;
       <!DOCTYPE html>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +24,9 @@ method TOP($/) {
       <!-- JS INSERT END -->
 
       <div id="info-panel">
-        <p><kbd>Ctrl+Click</kbd> to collapse/uncollapse nodes</p>
+        <p><i><kbd>Ctrl+Click</kbd> to collapse/uncollapse nodes</i></p>
       </diV>
+      <h1><code>\qq[$!code]</code></h1>
       ♥
 }
 
