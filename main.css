@@ -4,7 +4,7 @@
 }
 
 html {
-    background: #ddc;
+    background: #ddddd2;
     color: #333;
 }
 
@@ -19,6 +19,13 @@ li {
 li li {
     padding-left: 2em;
     border-left: 1px dotted #333;
+}
+
+#info-panel {
+    padding: 20px;
+    border: 1px solid #444;
+    margin-bottom: 20px;
+    background: #ddc;
 }
 
 .node-with-kids:before {
