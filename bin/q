@@ -16,6 +16,5 @@ multi MAIN('o', *@args) {
 }
 
 multi MAIN('z', *@args) {
-    my $*OUT := $out;
     CoreHackers::Q.new.zero-run: @args, :opt;
 }
