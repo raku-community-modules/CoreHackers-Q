@@ -116,6 +116,7 @@ method TOP($/) {
       </script><!-- JS INSERT END -->
 
       <div id="info-panel">
+        <p>Rakudo version <code>\qq[$*RAKU.compiler.version]</code></p>
         <p><i><kbd>Ctrl+Click</kbd> to collapse/uncollapse nodes</i></p>
       </diV>
       <h1><code>\qq[$!code]</code></h1>
