@@ -1,7 +1,6 @@
-unit class CoreHackers::Q;
 use CoreHackers::Q::Parser;
 
-method run (@args, :$opt) {
+sub q-run (@args, :$opt) is export {
     @args.splice: 1, 0, ['--target=' ~ ($opt ?? 'optimize' !! 'ast')];
     my $source = (run @args, :out).out.slurp: :close;
     say CoreHackers::Q::Parser.new.view: ~@args.map({
@@ -9,4 +8,4 @@ method run (@args, :$opt) {
     }), $source;
 }
 
-method zero-run(@args) { run @args }
+sub zero-run(@args) is export { q-run: @args }
