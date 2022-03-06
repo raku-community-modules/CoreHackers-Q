@@ -10,8 +10,8 @@ from a program and makes an HTML file from them.
 The HTML page provides these extra features unavailable in plain
 `raku --target=ast` and `raku --target=optimize` output:
 
-* Click on individual tree nodes to collapse/expand them
-* Color coding: of sunk nodes, QAST::Want alternatives, static and non-static
+* Control-click on individual tree nodes to collapse/expand them
+* Color coding: of sunk nodes, `QAST::Want` alternatives, static and non-static
     calls, etc.
 
 Example output:
