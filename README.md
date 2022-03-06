@@ -15,7 +15,7 @@ The HTML page provides these extra features unavailable in plain
     calls, etc.
 
 Example output:
-![](example.png)
+![An example](example.png)
 
 # USAGE
 
