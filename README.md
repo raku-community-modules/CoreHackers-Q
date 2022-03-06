@@ -54,26 +54,28 @@ $ q o raku -e 'say "hello"' > out.html; google-chrome out.html
 $ q z raku -e 'say "hello"'
 ```
 
-Just runs the perl6 command as is. Mnemonic: "zero". This command exists simply
+Just runs the raku command as is. Mnemonic: "zero". This command exists simply
 to easily switch between `a`/`o` runs and plain raku runs.
 
 ----
 
-#### REPOSITORY
+## Meta
+
+### REPOSITORY
 
 Fork this module on GitHub:
 https://github.com/raku-community-modules/CoreHackers-Q
 
-#### BUGS
+### BUGS
 
 To report bugs or request features, please use
 https://github.com/raku-community-modules/CoreHackers-Q/issues
 
-#### AUTHOR
+### AUTHOR
 
-Zoffix Znet (http://perl6.party/)
+Originally Zoffix Znet, now maintained by the Raku Community Adoption Center.
 
-#### LICENSE
+### LICENSE
 
 You can use and distribute this module under the terms of the
 The Artistic License 2.0. See the `LICENSE` file included in this
