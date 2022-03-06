@@ -1,8 +1,8 @@
 use Test;
+use Test::Output;
 
 use CoreHackers::Q;
 
-q-run( ["raku", "-Ilib", "t/00-basic.t"]);
-
-like( "out.html".IO.slurp, /"Rakudo version"/, "Output created");
+stdout-like( { q-run( ["raku", "-Ilib", "t/00-basic.t"]) },
+        /"Rakudo version"/, "Output created");
 done-testing;
