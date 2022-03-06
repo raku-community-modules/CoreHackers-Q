@@ -4,7 +4,7 @@
   "version": "1.002000",
   "perl": "6.c",
   "authors": [
-      "Zoffix Znet", "Raku community"
+      "Zoffix Znet", "Raku community modules team"
   ],
   "auth": "zef:raku-community-modules",
   "depends": [
