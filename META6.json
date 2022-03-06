@@ -1,7 +1,7 @@
 {
   "name": "CoreHackers::Q",
   "description": "Raku QAST Visualizer",
-  "version": "1.001005",
+  "version": "1.002000",
   "perl": "6.c",
   "authors": [
     "Zoffix Znet"
@@ -24,6 +24,7 @@
   "license": "Artistic-2.0",
   "tags": [
     "core dev",
-    "QAST"
+    "QAST",
+    "developer tools"
   ]
 }
