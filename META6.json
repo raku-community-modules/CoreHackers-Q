@@ -8,7 +8,7 @@
   ],
   "auth": "zef:raku-community-modules",
   "depends": [
-    "HTML::Escape"
+    "HTML::Entity::Fast"
   ],
   "test-depends": [
     "Test::Output"

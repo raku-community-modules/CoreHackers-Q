@@ -1,9 +1,9 @@
 unit class CoreHackers::Q::Parser::Actions;
-use HTML::Escape;
+use HTML::Entity::Fast;
 
 has Str:D $.code is required;
 
-sub prefix:<E> { $^t.Str.&escape-html }
+sub prefix:<E> { $^t.Str.&encode-html-entities }
 
 method TOP($/) {
     make q:to/♥/ ~ ｢<ul class="nodes">｣ ~ $<node>».made.join("\n") ~ ｢</ul>｣;
