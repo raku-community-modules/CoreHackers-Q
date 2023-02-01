@@ -1,4 +1,4 @@
-#!/usr/bin/env perl6
+#!/usr/bin/env raku
 
 my $script := 'lib/CoreHackers/Q/Parser/Actions.pm6'.IO;
 my $css-re := /'<!-- CSS INSERT START -->' <( .+? )> '<!-- CSS INSERT END -->'/;
