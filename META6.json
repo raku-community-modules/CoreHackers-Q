@@ -1,30 +1,36 @@
 {
-  "name": "CoreHackers::Q",
-  "description": "Raku QAST Visualizer",
-  "version": "1.002000",
-  "raku": "6.c",
-  "authors": [
-      "Zoffix Znet", "Raku community modules team"
-  ],
   "auth": "zef:raku-community-modules",
+  "authors": [
+    "Zoffix Znet",
+    "Raku community modules team"
+  ],
+  "build-depends": [
+  ],
   "depends": [
     "HTML::Entity::Fast"
   ],
-  "test-depends": [
-    "Test::Output"
-  ],
+  "description": "Raku QAST Visualizer",
+  "license": "Artistic-2.0",
+  "name": "CoreHackers::Q",
   "provides": {
     "CoreHackers::Q": "lib/CoreHackers/Q.rakumod",
     "CoreHackers::Q::Parser": "lib/CoreHackers/Q/Parser.rakumod",
     "CoreHackers::Q::Parser::Actions": "lib/CoreHackers/Q/Parser/Actions.rakumod"
   },
+  "raku": "6.c",
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/CoreHackers-Q.git",
   "support": {
     "source": "https://github.com/raku-community-modules/CoreHackers-Q"
   },
-  "license": "Artistic-2.0",
   "tags": [
     "core dev",
     "QAST",
     "developer tools"
-  ]
+  ],
+  "test-depends": [
+    "Test::Output"
+  ],
+  "version": "1.003000"
 }
